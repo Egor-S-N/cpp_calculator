@@ -2,4 +2,9 @@ cmake_minimum_required(VERSION 3.16)
 
 project(cpp_calculator)
 
-add_executable(cpp_calculator src/main.cpp )
+set(SOURCES
+    src/calculator.cpp
+    src/main.cpp
+)
+
+add_executable(cpp_calculator ${SOURCES} )
