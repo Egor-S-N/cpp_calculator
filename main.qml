@@ -41,8 +41,8 @@ ApplicationWindow {
             anchors.rightMargin: 13
             anchors.bottomMargin: 13
             
-            
             text: "0"
+
             color: "#FFFFFF"
             font.pixelSize: 60
         }
@@ -176,6 +176,7 @@ ApplicationWindow {
             width: 60
             radius: 45
             Text{
+                id: btn_seven_text
                 text: "7"
                 color: "#024873"
                 font.pixelSize: 20
@@ -183,6 +184,9 @@ ApplicationWindow {
             }
             MouseArea{
                 anchors.fill: parent
+                onClicked: {
+                    curent_value.text += String(calculator.btn_num_click(qsTr(btn_seven_text.text)))
+                }
                 onPressedChanged: {
                     if(pressed)
                         parent.color = "#04BFAD"
@@ -200,6 +204,7 @@ ApplicationWindow {
             width: 60
             radius: 45
             Text{
+                id: btn_eight_text
                 text: "8"
                 color: "#024873"
                 font.pixelSize: 20
@@ -207,6 +212,9 @@ ApplicationWindow {
             }
             MouseArea{
                 anchors.fill: parent
+                onClicked: {
+                    curent_value.text += String(calculator.btn_num_click(qsTr(btn_eight_text.text)))
+                }
                 onPressedChanged: {
                     if(pressed)
                         parent.color = "#04BFAD"
@@ -224,6 +232,7 @@ ApplicationWindow {
             width: 60
             radius: 45
             Text{
+                id: btn_nine_text
                 text: "9"
                 color: "#024873"
                 font.pixelSize: 20
@@ -231,6 +240,9 @@ ApplicationWindow {
             }
             MouseArea{
                 anchors.fill: parent
+                onClicked: {
+                    curent_value.text += String(calculator.btn_num_click(qsTr(btn_nine_text.text)))
+                }
                 onPressedChanged: {
                     if(pressed)
                         parent.color = "#04BFAD"
@@ -272,6 +284,7 @@ ApplicationWindow {
             width: 60
             radius: 45
             Text{
+                id: btn_four_text
                 text: "4"
                 color: "#024873"
                 font.pixelSize: 20
@@ -279,6 +292,9 @@ ApplicationWindow {
             }
             MouseArea{
                 anchors.fill: parent
+                onClicked: {
+                    curent_value.text += String(calculator.btn_num_click(qsTr(btn_four_text.text)))
+                }
                 onPressedChanged: {
                     if(pressed)
                         parent.color = "#04BFAD"
@@ -296,6 +312,7 @@ ApplicationWindow {
             width: 60
             radius: 45
             Text{
+                id: btn_five_text
                 text: "5"
                 color: "#024873"
                 font.pixelSize: 20
@@ -303,6 +320,9 @@ ApplicationWindow {
             }
             MouseArea{
                 anchors.fill: parent
+                onClicked: {
+                    curent_value.text += String(calculator.btn_num_click(qsTr(btn_five_text.text)))
+                }
                 onPressedChanged: {
                     if(pressed)
                         parent.color = "#04BFAD"
@@ -320,6 +340,7 @@ ApplicationWindow {
             width: 60
             radius: 45
             Text{
+                id: btn_six_text
                 text: "6"
                 color: "#024873"
                 font.pixelSize: 20
@@ -327,6 +348,9 @@ ApplicationWindow {
             }
             MouseArea{
                 anchors.fill: parent
+                onClicked: {
+                    curent_value.text += String(calculator.btn_num_click(qsTr(btn_six_text.text)))
+                }
                 onPressedChanged: {
                     if(pressed)
                         parent.color = "#04BFAD"
@@ -372,7 +396,7 @@ ApplicationWindow {
             width: 60
             radius: 45
             Text{
-                id: btn_onee_text
+                id: btn_one_text
                 text: "1"
                 color: "#024873"
                 font.pixelSize: 20
@@ -381,7 +405,7 @@ ApplicationWindow {
             MouseArea{
                 anchors.fill: parent
                 onClicked: {
-                    curent_value.text = curent_value.text + btn_onee_text.text
+                    curent_value.text += String(calculator.btn_num_click(qsTr(btn_one_text.text)))
                 }
                 onPressedChanged: {
                     if(pressed)
@@ -410,7 +434,7 @@ ApplicationWindow {
                 anchors.fill: parent
 
                 onClicked: {
-                    curent_value.text = curent_value.text + btn_two_text.text
+                    curent_value.text += String(calculator.btn_num_click(qsTr(btn_two_text.text)))
                 }
                 onPressedChanged: {
                     if(pressed)
@@ -438,7 +462,7 @@ ApplicationWindow {
             MouseArea{
                 anchors.fill: parent
                 onClicked: {
-                    curent_value.text = curent_value.text + btn_three_text.text
+                    curent_value.text += String(calculator.btn_num_click(qsTr(btn_three_text.text)))
                 }
                 onPressedChanged: {
                     if(pressed)
@@ -495,7 +519,7 @@ ApplicationWindow {
                 anchors.fill: parent
 
                 onClicked: {
-                    curent_value.text = ""
+                    curent_value.text = String(calculator.clear_val())
                 }
 
                 onPressedChanged: {
@@ -525,7 +549,7 @@ ApplicationWindow {
                 anchors.fill: parent
 
                 onClicked: {
-                    curent_value.text = curent_value.text + btn_zero_text.text
+                    curent_value.text += String(calculator.btn_num_click(qsTr(btn_zero_text.text)))
                 }
                 onPressedChanged: {
                     if(pressed)
