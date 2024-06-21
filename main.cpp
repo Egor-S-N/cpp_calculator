@@ -1,12 +1,10 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
-#include "calc_logic.h"
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
-    qmlRegisterType<Calc_logc>("com.example", 1, 0, "Calculator");
     const QUrl url(QStringLiteral("qrc:/main.qml"));
 
 

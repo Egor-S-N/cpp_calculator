@@ -10,7 +10,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(Qt6 COMPONENTS Core Gui Qml Quick Widgets REQUIRED)
 
 add_executable(calculator
-calc_logic.cpp
 qml.qrc
 main.cpp
 )
